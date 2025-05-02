@@ -79,7 +79,7 @@ The `order_products` table includes:
 
 The entity relationship diagram below describes the relationships between database entities.
 
-![ER Diagram](diagram.png)
+![ER Diagram](assets/diagram.png)
 
 As shown in the diagram:
 
