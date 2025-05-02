@@ -2,8 +2,6 @@
 
 By Matheus Teles Marques
 
-Video overview: <URL HERE>
-
 ## Scope
 
 The database developed for the `Ciclo Universo` bicycle store is designed to manage orders and inventory, updating stock levels, and storing customer information for support and service. To meet these objectives, the database includes the following entities:
@@ -13,7 +11,7 @@ The database developed for the `Ciclo Universo` bicycle store is designed to man
 * Orders, including the number to identify the order, the date and time it was made,
 * Items ordered, including the quantity of the item and the price per unit at the time the item was ordered
 
-Out of the scope are elements like employees, suppliers, that were not considered for this initial version of the system that focuses exclusively on orders and inventory.
+Out of the scope are elements like employees, suppliers and payment and discount systems, that were not considered for this initial version of the system that focuses exclusively on orders and inventory.
 
 ## Functional Requirements
 
@@ -27,7 +25,7 @@ This database will be able to support:
 
 * Update stock automatically when order occur
 
-The system as it was developed is not yet capable of managing employees, maintaining a list of suppliers and apply discounts following some certain logic that should be developed for this.
+The system as it was developed is not yet capable of managing employees, maintaining a list of suppliers, processing payment transactions, or applying discounts following some certain logic that should be developed for this.
 
 ## Representation
 
@@ -86,8 +84,7 @@ The entity relationship diagram below describes the relationships between databa
 As shown in the diagram:
 
 * A customer can place zero or more orders. Zero, if he has registered but has not yet placed an order in the store. While an order is made by one customer and only one customer.
-* An order can contain one or more products. While the same product can belong to one or more orders.In this case we consider that for an order to be placed at least one product must be included.
-
+* An order can contain one or more products. While a product can belong to zero or more orders. Zero, if a product exists in the system without being included in an order yet.
 
 ## Optimizations
 
@@ -111,13 +108,13 @@ To optimize frequent queries, indexes were implemented:
 
 The database for `Ciclo Universo` has several important limitations that need addressing in future versions:
 
-* The biggest issue is the absence of `supplier management`, which makes it difficult to track product origins or manage the restocking process efficiently.
+* An issue is the absence of `supplier management`, which makes it difficult to track product origins or manage the restocking process efficiently.
 
 * The system also lacks `employee management features`, preventing the tracking of which staff members handle specific orders or any analysis of their performance.
+
+* The database also lacks a `payment system`, making it impossible to track payment methods or reconcile financial transactions with orders. This prevents implementation of features like installment payments.
 
 * Another limitation is the absence of a `discount or promotion system`, which significantly restricts marketing options.
 
 * A frustrating operational challenge is the requirement for `manual order status updates`. Attempts to implement triggers to automate this process were unsuccessful. This manual updating is time-consuming and prone to errors, as staff must remember to change each status throughout the order lifecycle instead of having the system handle those transitions automatically. One option to deal with this limitation would be to delegate this responsibility outside of the database, to the application layer. This approach would allow for the implementation of more complex business logic and rules for status transitions, rather than trying to handle this process within the database itself.
-
-* Another related limitation is the lack of `transaction integrity between orders and order products`. When a rollback occurs due to failures in the `order_products table`, the corresponding order in the `orders` table isn't automatically marked as canceled. This disconnect can lead to inconsistent order records, creating potential data integrity issues. This limitation further emphasizes the need for application-level management of the order process to ensure proper coordination between related tables and appropriate status updates when transactions fail.
 

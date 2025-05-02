@@ -23,16 +23,16 @@ SELECT * FROM "sales_by_date";
 
 -- INSERT INTO customers
 INSERT INTO "customers" ("id", "first_name", "last_name", "email", "telephone", "address") VALUES
-(1, 'Pedro', 'Silva', 'pedro.silva@gmail.com', '62981452365', '123 Avenida Goiás, Setor Central, Goiânia, Goiás'),
-(2, 'Ana', 'Oliveira', 'ana.oliveira@hotmail.com', '62998752136', '456 Rua 10, Setor Oeste, Goiânia, Goiás'),
-(3, 'Carlos', 'Santos', 'carlos.santos@yahoo.com', '62987651243', '789 Avenida T-63, Setor Bueno, Goiânia, Goiás'),
-(4, 'Mariana', 'Costa', 'mariana.costa@gmail.com', '62998523641', '101 Rua 5, Setor Sul, Goiânia, Goiás'),
-(5, 'Rafael', 'Pereira', 'rafael.pereira@outlook.com', '62985214736', '202 Avenida Anhanguera, Setor Campinas, Goiânia, Goiás'),
-(6, 'Juliana', 'Ferreira', 'juliana.ferreira@gmail.com', '62996325874', '303 Avenida Vera Cruz, Jardim Goiás, Goiânia, Goiás'),
-(7, 'Lucas', 'Almeida', 'lucas.almeida@hotmail.com', '62985471236', '404 Rua 20, Setor Marista, Goiânia, Goiás'),
-(8, 'Fernanda', 'Rodrigues', 'fernanda.rodrigues@yahoo.com', '62998765432', '505 Avenida Rio Verde, Cidade Jardim, Aparecida de Goiânia, Goiás'),
-(9, 'Gustavo', 'Gomes', 'gustavo.gomes@gmail.com', '62987453216', '606 Rua Tapajós, Setor Vila Brasília, Aparecida de Goiânia, Goiás'),
-(10, 'Patricia', 'Sousa', 'patricia.sousa@outlook.com', '62996548723', '707 Avenida São Paulo, Setor Garavelo, Aparecida de Goiânia, Goiás');
+(1, 'Pedro', 'Silva', 'pedro.silva@example.com', '62999900001', '123 Avenida Goiás, Setor Central, Goiânia, Goiás'),
+(2, 'Ana', 'Oliveira', 'ana.oliveira@example.com', '62999900002', '456 Rua 10, Setor Oeste, Goiânia, Goiás'),
+(3, 'Carlos', 'Santos', 'carlos.santos@example.com', '62999900003', '789 Avenida T-63, Setor Bueno, Goiânia, Goiás'),
+(4, 'Mariana', 'Costa', 'mariana.costa@example.com', '62999900004', '101 Rua 5, Setor Sul, Goiânia, Goiás'),
+(5, 'Rafael', 'Pereira', 'rafael.pereira@example.com', '62999900005', '202 Avenida Anhanguera, Setor Campinas, Goiânia, Goiás'),
+(6, 'Juliana', 'Ferreira', 'juliana.ferreira@example.com', '62999900006', '303 Avenida Vera Cruz, Jardim Goiás, Goiânia, Goiás'),
+(7, 'Lucas', 'Almeida', 'lucas.almeida@example.com', '62999900007', '404 Rua 20, Setor Marista, Goiânia, Goiás'),
+(8, 'Fernanda', 'Rodrigues', 'fernanda.rodrigues@example.com', '62999900008', '505 Avenida Rio Verde, Cidade Jardim, Aparecida de Goiânia, Goiás'),
+(9, 'Gustavo', 'Gomes', 'gustavo.gomes@example.com', '62999900009', '606 Rua Tapajós, Setor Vila Brasília, Aparecida de Goiânia, Goiás'),
+(10, 'Patricia', 'Sousa', 'patricia.sousa@example.com', '62999900010', '707 Avenida São Paulo, Setor Garavelo, Aparecida de Goiânia, Goiás');
 
 -- INSERT INTO products
 INSERT INTO "products" ("id", "name", "description", "category", "price", "inventory") VALUES
